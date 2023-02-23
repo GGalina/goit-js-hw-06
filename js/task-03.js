@@ -14,8 +14,10 @@ const images = [
 ];
 
 const galeryListEl = document.querySelector(`.gallery`);
-
-  const imgItem = images.map((item) => { // for each element in array
+galeryListEl.style.display = `flex`;
+galeryListEl.style.gap = `30px`;
+    
+const imgItem = images.map((item) => { // for each element in array
     const imgListItem = // add <li> and <img> tags and pass objects from the array
       `<li 
       class="galery-img",
@@ -27,9 +29,3 @@ const galeryListEl = document.querySelector(`.gallery`);
   });
 
 galeryListEl.insertAdjacentHTML(`afterbegin`, imgItem.join(""));
-
-  const styleFunc = imgItem.map(() => { //add gallery design
-      galeryListEl.style.display = `flex`;
-      galeryListEl.style.gap = `30px`;
-      return galeryListEl;
-    });

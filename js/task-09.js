@@ -1,5 +1,5 @@
 const {backgroundEl, changeBtnEl, colorEl} = {
-  backgroundEl: document.querySelector(`.widget`),
+  backgroundEl: document.querySelector(`body`),
   changeBtnEl: document.querySelector(`[type="button"]`),
   colorEl: document.querySelector(`.color`)
 }
@@ -14,6 +14,7 @@ function getRandomHexColor() {
 }
 
 function onChangeColor() {
-  backgroundEl.style.backgroundColor = getRandomHexColor(); //set background color
-  colorEl.textContent = getRandomHexColor(); //set value for span element
+  let color = getRandomHexColor();
+  backgroundEl.style.backgroundColor = color; //set background color
+  colorEl.textContent = color; //set value for span element
 };

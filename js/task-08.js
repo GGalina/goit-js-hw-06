@@ -16,8 +16,6 @@ function onSubmit(event) {
     if (email === "" || password === "") {
         alert(`All fields must be filled in`);  // if the form has empty fields display alert
     } else {
-        inputData.email = email;
-        inputData.password = password;
         console.log(inputData); // display the object with the entered data
         event.target.reset();   // clear the values of the form fields
     };
